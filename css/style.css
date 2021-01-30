@@ -1,0 +1,449 @@
+@import url(fonts.css);
+
+/**************************** ESTILOS A NIVEL GENERAL ****************************/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+.tit-seccion{
+    /* color: #d3d2d2; */
+    color: #dcdcdc;
+    font-family: lato-black;
+    font-size: 160px;
+}
+
+.text-bold{
+    font-family: lato-bold;
+    text-transform: capitalize;
+}
+
+/* estilos del div que contiene los textos de las diversas secciones*/
+.text-seccion {
+    font-family: lato-regular;
+    color: #242424;
+    font-size: 17px;
+}
+
+.text-seccion h3{
+    font-size: 20px;
+    font-family: lato-regular;
+}
+
+/* primera letra de los titulos */
+.prim-letra{
+    text-transform: capitalize;
+    color: #bebebe;
+}
+
+@media (max-width: 800px){
+    .tit-seccion{
+        font-size: 70px;
+    }
+}
+
+/************************************************  HEADER ************************************************/
+
+/**************************** NAVBAR ****************************/
+#navbar{
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    padding: 6px 40px;
+    float: left;
+}
+
+/* efectos cuando se hace scroll */
+.sombra{
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e0e0',GradientType=0 );
+    box-shadow: 0px 0px 5px  #2e2d2d; /*SOMBRA: 0px a derecha 3px hacia abajo y 5px de tamaño*/
+}
+
+.shrink{
+    transition: all ease-in-out 0.8s;
+    background: #242424;
+    position: fixed;
+}
+
+.top{
+    transition: all ease-in-out 0.8s;
+}
+
+/* color barra cuando se hace scroll */
+#navbar.shrink {
+    background: #242424;
+
+}
+
+/* icono o logo(brand) */
+#navbar.shrink .logo{
+    color: #dcdcdc;
+    transition: all ease-in-out 0.8s;
+}
+
+#navbar.shrink .navbar-nav .nav-link {
+    transition: all ease-in-out 0.8s;
+    color: #ffffff;
+    background: #242424;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/* fin scroll */
+
+
+#navbar .navbar-nav .nav-link {
+    transition: all ease-in-out 0.8s;
+    color: #494949;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #f5f5f5;
+}
+
+#navbar .navbar-nav .nav-link:hover {
+    color: orangered;
+}
+
+@media (max-width: 800px){
+
+    #navbar{
+            background-color: #f5f5f5;
+    }
+    #navbar .container-fluid .navbar-toggler {
+        transition: all ease-in-out 0.8s;
+    }
+
+    #navbar.shrink .container-fluid .navbar-toggler {
+        background-color: #dcdcdc;
+        transition: all ease-in-out 0.8s;
+    }
+}
+
+/* logo texto barra nav */
+#navbar .logo{
+    color: #494949; 
+    font-size: 30px;
+    transition: all ease-in-out 0.8s;
+}
+
+@media (max-width: 800px){
+    #navbar .logo{
+        font-size: 15px;
+    }
+
+    /* cambiar el color del logo cuando la navbar se hace negra */
+    #navbar.shrink .logo{
+        color: #dcdcdc;
+    }
+}
+
+
+/************************************************  MAIN ************************************************/
+
+/**************************** SECCION INICIO ****************************/
+
+@media (max-width: 800px){
+    #inicio{
+        height: 990px;
+    }
+}
+
+.cont-hola{
+    position: relative;
+}
+
+.colum-hola{
+    padding: 100px 0px;
+    margin-top: 70px;
+}
+
+/* texto HOLA */
+.colum-hola h1{
+    color: #dcdcdc;
+    font-family: lato-black;
+    font-size: 320px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 80%;
+}
+
+/* este estilo de da al segundo "hola" los bordes de color y el fondo trasparente */
+.h1-trans{
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px  #dcdcdc;
+}
+
+.colum-lateral{
+    background-color: #242424;
+    height: 596px;
+}
+
+@media(max-width: 800px){
+    .colum-hola{
+        padding: 0px 0px;
+        margin-top: 60px;
+    }
+
+    .colum-hola h1{
+        font-size: 140px;
+    }
+
+    /* quitar el Hola! trasparente y la columna oscura */
+    .h1-trans{
+        display: none;
+    }
+    .colum-lateral{
+        display: none;
+    }
+}
+
+/* container sobrepuesto donde lleva mi descripcion */
+.cont-soy{
+    position: absolute;
+    z-index: 50;
+    top: 30%;
+    left: 10%;
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .cont-soy{
+        left: 0%;
+    }
+}
+
+.text-soy{
+    border-left: 6px #242424 solid;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+
+/****** foto Soy ******/
+.colum-foto img{
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .colum-foto{
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .colum-foto img{
+        width: 70%;
+    }
+}
+
+/**** barra hero icono ****/
+#barra-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+}
+
+#barra-icons li{
+    padding: 10px;
+    display: inline-block;
+
+}
+#barra-icons li a{
+    text-decoration: none;
+}
+
+.icon{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+@media(max-width: 800px){
+    #barra-icons{
+        background-color: #242424;
+    }
+
+    #barra-icons ul{
+        margin: 0px;
+    }
+}
+
+
+/**************************** SECCION ACERCA ****************************/
+#acerca{
+    padding: 50px 0px;
+}
+
+.text-acerca{
+    padding: 20px 0px;
+}
+
+/**** ul habilidades personales ****/
+#habil-pers ul{
+    list-style: none;
+    line-height: 200%;
+}
+
+
+/**************************** SECCION HABILIDADES Y ESTUDIOS ****************************/
+
+#habil-estudios{
+    font-family: lato-regular;
+    padding: 50px 0px;
+}
+
+@media(max-width: 800px){
+    #habil-estudios{
+        padding: 0px;
+    }
+}
+
+/**** seccion habilidades ****/
+/* Titulo seccion */
+.tit-seccion-hab{
+    color: #dcdcdc;
+    font-family: lato-black;
+    font-size: 160px;
+    line-height: 90%;
+}
+
+@media (max-width: 800px){
+    .tit-seccion-hab{
+        font-size: 60px;
+    }
+}
+
+.cont-habilidades{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.colum-habilidad{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* icono de la habilidad */
+.icono img{
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .icono img{
+        width: 50%;
+    }
+}
+
+/* indicadores redondos del nivel en la habilidad, se llenan con las x */
+.indicador{
+    border: 2px#242424 solid;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 1px;
+}
+
+.indicador.x{
+    background: #242424;
+}
+
+
+/**** seccion me gustaria ****/
+.iconos-gustaria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/**** seccion estudios ****/
+.cont-estudios{
+    padding-top: 70px;
+}
+
+#estudios{
+    padding: 30px;
+}
+
+.estudio ul{
+    list-style: none;
+    color: #bbbbbb;
+}
+
+.estudio a{
+    font-size: 17px;
+    list-style: none;
+    font-family: lato-bold;
+    color: #242424;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+.estudio a:hover{
+    text-decoration: none;
+    color: #bebebe;
+}
+
+.card-body ul{
+    list-style: disc;
+    color: #2e2e2e;
+}
+
+
+/**************************** SECCION PROYECTOS ****************************/
+
+#proyectos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.colum-proyecto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* cuando se consiga cambiar los colores a svg */
+/* #ico1{
+    background: url(../images/icons/html-5.svg) center no-repeat;
+    width: 10px;
+} */
+/* #ico2{
+    background: url(../images/icons/css-3.svg) center no-repeat;
+}
+#ico3{
+    background: url(../images/icons/js.svg) center no-repeat;
+}
+#ico4{
+    background: url(../images/icons/php.svg) center no-repeat;
+}
+#ico5{
+    background: url(../images/icons/cplus.svg) center no-repeat;
+} */

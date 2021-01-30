@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.color{
+    background-color: aqua;
+}
+
+@media (max-width: 800px){
+    .color{
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+/* ESTILOS GLOBALES PARA LOS TITULOS Y TEXTOS DE LAS SECCIONES*/
+.tit_sec{
+    color: orangered;
+    font-family: Roboto Condensed;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+.text_sec{
+    text-align: center;
+    font-family: roboto;
+    font-size: 20px;
+}
+
+
+
+/* Estilo global para la row que contiene titulo y la descripcion de cada seccion */
+.info_cnt{
+    justify-content: center;
+}
+
+/* #tit_sec1{
+    font-family: Roboto Condensed;
+color: red;
+
+} */
+
+.info_sec .tit_sec{
+    text-align: center;
+}
+
+.navbar{
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4e0e0',GradientType=0 );
+    box-shadow: 0px 0px 5px  #2e2d2d; /*SOMBRA: px a derecha px hacia abajo y px de tamaño*/
+    color: aqua;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #494949;
+    font-size: 23px;
+    text-transform: capitalize;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: orangered;
+}
+
+.carousel .carousel-inner .carousel-item{
+    height: 600px;
+    margin-top: 70px;
+    padding-top: 200px;
+
+}
+
+.txt-carousel{
+    color: #ffffff;
+    margin: 0 auto auto 0px;
+    font-family: Roboto Condensed;
+
+    /* font-family: Roboto; */
+    /* font-weight */
+}
+
+.txt-carousel p{
+    font-size: 25px; 
+}
+
+.txt-carousel h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+/*  ESTILOS PARA CONTENIDO DEL CARRUSEL (SLIDER) */
+
+header #slider1{
+    background: linear-gradient(right, rgba(255,255,255,0), rgb(7, 0, 0)), url(../images/hero_img_1.jpg) center no-repeat;
+
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(7, 0, 0)), url(../images/hero_img_1.jpg) center no-repeat;
+    background-size: cover;
+}
+
+header #slider2{
+    background: linear-gradient(right, rgba(255,255,255,0), rgb(7, 0, 0)), url(../images/hero_img_2.jpg) center no-repeat;
+
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(7, 0, 0)), url(../images/hero_img_2.jpg) center no-repeat;
+    background-size: cover;
+}
+
+header #slider3{
+    background: linear-gradient(right, rgba(255,255,255,0), rgb(7, 0, 0)), url(../images/hero_img_3.jpg) center no-repeat;
+
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(7, 0, 0)), url(../images/hero_img_3.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+/* SECCION NOSOTROS */
+#nosotros{
+    margin: 50px auto;
+    background-color: #dfdfdf;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#nosotros h1{
+    text-align: left;
+}
+
+/* container imagen nosotros */
+#cnt_img_nos{
+    text-align: center;
+}
+
+#cnt_img_nos img{
+    width: 100%;
+    border: solid 10px #ffffff;
+}
+
+
+/* SECCION DE DISEÑOS (NIVELES) */
+#diseno h1{
+    text-align: center;
+}
+
+.cnt_diseno{
+    margin: 25px auto;    
+}
+
+/* titulo en h2 de cada diseño */
+.tit_diseno{
+    color: orangered;
+    font-family: Roboto Condensed;
+    text-transform: capitalize;
+}
+
+.cnt_img_diseno{
+    text-align: right;
+    transition: all ease-out 0.2s;
+}
+
+.cnt_img_diseno:hover{
+    transform: scale(1.05);
+}
+
+.cnt_img_diseno img{
+    width: 80%;
+}
+
+@media(max-width: 800px){
+    .cnt_img_diseno{
+        text-align: center;
+        transition: all ease-out 0.2s;
+    }
+    .cnt_img_diseno img{
+        width: 100%;
+    }
+}
+
+
+/* SECCION TESTIMONIOS */
+#testimonios{
+    margin: 50px auto;
+    background-color: rgb(252, 252, 135);
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: roboto;
+}
+
+.testimonio{
+    margin: 30px auto;
+}
+
+.testimonio .col-lg-3{
+    min-width: 50%;
+}
+
+.cnt_img_testim{
+    text-align: center;
+}
+
+.testimonio img{
+    width: 60%;
+    margin: 0 auto;
+    /* tipo de centrado, util para proximos proyectos */
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+
+
+/* SECCION CONTACTO */
+footer{
+    background-color: #7a7a7a;
+    color: #ffffff;
+}
+
+#contacto{
+    padding: 50px 15px;
+}
+
+@media(max-width: 800px){
+    #contacto{
+        text-align: center;
+    }
+}
+
+#contacto h1{
+    font-family: Roboto Condensed;
+    font-size: 35px;
+}
+
+#contacto ul li{
+    font-family: Roboto;
+    list-style: none;
+    font-size: 20px;
+}
+
+#mapa{
+    text-align: center;
+}
+
+#mapa iframe{
+    width: 100%;
+    border-radius: 3px;
+    margin: 30px auto;
+}
+
+#redes{
+    display: inline-block;
+}
+
+#redes > a{
+    opacity: 0.5;
+}
+#redes > a:hover{
+    opacity: 1;
+}
+
+#redes a img{
+    width: 30%;
+}
+
+.copy-right{
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.copy-right a{
+    text-decoration:none;
+    color: #fff;
+}
+
+.logo-footer{
+    text-align: center;
+    margin: 20px auto 50px;
+    /* padding: 50px; */
+}
